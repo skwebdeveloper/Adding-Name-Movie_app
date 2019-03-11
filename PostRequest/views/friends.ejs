@@ -1,0 +1,48 @@
+<style>
+body{
+    font-family:sans-serif;
+}
+    h1{
+        font-size:35px;
+        background-color:orange;
+        color:black;
+        text-align:center;
+    }
+    input[type=text]{
+        border:none;
+        box-shadow:0 21px 30px rgba(0, 0 , 0 ,0.2);
+        background-color:yellow;
+        width:200px;
+        height:50px;
+        margin:7px;
+    }
+    button{
+        width:100px;
+        height:50px;
+        font-size:20px;
+        background-color:yellow;
+        border:none;
+    }
+    button:hover{
+        background-color:orange;
+        cursor:pointer;
+        border:none;
+    }    
+    
+</style>
+
+<h1>FRIENDS ARE COOL</h1>
+
+<% friends.forEach(function(name){ %>
+<li>
+    <%= name %>
+</li>
+    
+<% }); %>
+
+
+<form method="POST" action="/addfriend">
+    <input type="text" name="newfriend" placeholder="Enter">
+    <button>HIT ME</button>
+    
+</form>
